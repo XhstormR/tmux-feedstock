@@ -13,7 +13,7 @@ package:
   version: "{{ version }}"
 
 source:
-  url: https://github.com/tmux/tmux/releases/download/{{ version_nounderscore }}/tmux-{{ version }}.tar.gz
+  url: https://github.com/tmux/tmux/releases/download/{{ version_nounderscore }}/tmux-{{ version_nounderscore }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
