@@ -4,16 +4,16 @@
 # e.g.,
 # {% set version = "3.7_" %}, for version 3.7, not {% set version = "3.7" %}.
 # {% set version = "3.7a" %} is fine.
-{% set version = "3.6b" %}
+{% set version = "3.7_" %}
 {% set version_nounderscore = version.replace("_", "") %}
-{% set sha256 = "390759d25fdba016887ec982b808927e637070fd7d03a8021f8ef3102b9ae3c7" %}
+{% set sha256 = "2344f191501b8a73eb71dd6c5fd5dcf8c765f5066f34ab46f04b3013dc7bc1a5" %}
 
 package:
   name: tmux
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
-  url: https://github.com/tmux/tmux/releases/download/{{ version_nounderscore }}/tmux-{{ version }}.tar.gz
+  url: https://github.com/tmux/tmux/releases/download/{{ version_nounderscore }}/tmux-{{ version_nounderscore }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
